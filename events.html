@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>الفعاليات - دليل فعاليات الجامعة الافتراضية</title>
+				<!-- Favicon -->
+				<link rel="icon" type="image/png" href="assets/images/svu-logo.png">
+
+					<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+						<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+							<link href="assets/css/styles.css" rel="stylesheet">
+</head>
+	<body>
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+			<div class="container">
+				<!-- Brand / Logo -->
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+					<img src="assets/images/svu-logo.png" alt="SVU Logo" style="height: 40px; width: auto;">
+						<div class="d-flex flex-column lh-1">
+							<span class="fw-bold">SVU</span>
+							<small class="fs-6">دليل الفعاليات</small>
+						</div>
+					</a>
+
+				<!-- Hamburger Button for Mobile -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Navbar Links -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">الرئيسية</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active fw-bold" href="events.html">الفعاليات</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">عن الدليل</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">اتصل بنا</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main class="py-5">
+			<div class="container">
+				<div class="text-center mb-5">
+					<h1 class="fw-bold">جميع الفعاليات</h1>
+					<p class="text-muted">استكشف كافة الأنشطة، الندوات، والفعاليات الأكاديمية والطلابية المقامة في الجامعة.</p>
+				</div>
+
+				<!-- Filter Bar -->
+				<div class="filter-box p-4 mb-5 bg-light rounded shadow-sm">
+					<div class="row g-3 align-items-center">
+						<div class="col-md-3">
+							<label for="searchInput" class="form-label fw-bold small">
+								<i class="bi bi-search me-1"></i> البحث
+							</label>
+							<input type="text" id="searchInput" class="form-control" placeholder="اسم الفعالية...">
+        </div>
+						<div class="col-md-3">
+							<label for="categoryFilter" class="form-label fw-bold small">
+								<i class="bi bi-funnel me-1"></i> التصنيف
+							</label>
+							<select id="categoryFilter" class="form-select">
+								<option value="all">جميع التصنيفات</option>
+								<option value="ثقافة">ثقافة</option>
+								<option value="رياضة">رياضة</option>
+								<option value="موسيقى">موسيقى</option>
+								<option value="عائلية">عائلية</option>
+								<option value="تقنية">تقنية</option>
+								<option value="فنون">فنون</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label for="locationFilter" class="form-label fw-bold small">
+								<i class="bi bi-geo-alt me-1"></i> المكان
+							</label>
+							<select id="locationFilter" class="form-select">
+								<option value="all">جميع الأماكن</option>
+								<option value="أونلاين">أونلاين</option>
+								<option value="ميداني">حضوري</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label for="dateFilter" class="form-label fw-bold small">
+								<i class="bi bi-calendar3 me-1"></i> التاريخ
+							</label>
+							<select id="dateFilter" class="form-select">
+								<option value="all">جميع التواريخ</option>
+								<option value="november">نوفمبر</option>
+								<option value="december">ديسمبر</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Events Grid -->
+				<div class="row g-4" id="eventsGrid">
+					<!-- Card 1 -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="ثقافة" data-location="ميداني" data-month="november">
+						<div class="card event-card h-100">
+							<img src="assets/images/Book_Fair_browsing_1440x900.jpg" class="card-img-top" alt="ثقافة">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">ثقافة</span>
+									<h5>مهرجان الثقافة والكتاب</h5>
+									<p class="small flex-grow-1 text-muted">أجنحة لدور النشر وندوات أدبية وجلسات توقيع كتب.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>15 نوفمبر
+										</small>
+										<a href="event.html?id=1" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- Card 2 -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="رياضة" data-location="ميداني" data-month="november">
+						<div class="card event-card h-100">
+							<img src="assets/images/atletismo-correr-deportes-marathon-wallpaper-preview.jpg" class="card-img-top" alt="رياضة">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">رياضة</span>
+									<h5>ماراثون الجامعة الرياضي</h5>
+									<p class="small flex-grow-1 text-muted">سباقات جري بمسافات مختلفة وجوائز قيّمة للفائزين.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>22 نوفمبر
+										</small>
+										<a href="event.html?id=2" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- Card 3 -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="موسيقى" data-location="ميداني" data-month="december">
+						<div class="card event-card h-100">
+							<img src="assets/images/music-educator-directing-student-orchestra-classroom_38013-84961.jpg" class="card-img-top" alt="موسيقى">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">موسيقى</span>
+									<h5>أمسية موسيقية كلاسيكية</h5>
+									<p class="small flex-grow-1 text-muted">أوركسترا الجامعة تقدّم مختارات من أشهر المؤلفات.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>5 ديسمبر
+										</small>
+										<a href="event.html?id=3" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- Card 4 (Updated to id=4) -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="تقنية" data-location="أونلاين" data-month="november">
+						<div class="card event-card h-100">
+							<img src="assets/images/AI-Eye-scaled.jpg" class="card-img-top" alt="تقنية">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">تقنية</span>
+									<h5>هاكاثون الذكاء الاصطناعي</h5>
+									<p class="small flex-grow-1 text-muted">حلول مبتكرة لتحديات البرمجة وتطوير البرمجيات الذكية.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>28 نوفمبر
+										</small>
+										<a href="event.html?id=4" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- Card 5 (Updated to id=5) -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="عائلية" data-location="ميداني" data-month="december">
+						<div class="card event-card h-100">
+							<img src="assets/images/istockphoto-496647371-612x612.jpg" class="card-img-top" alt="عائلية">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">عائلية</span>
+									<h5>اليوم العائلي المفتوح</h5>
+									<p class="small flex-grow-1 text-muted">أنشطة ترفيهية ومسابقات تجمع بين الطلاب وأسرهم.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>10 ديسمبر
+										</small>
+										<a href="event.html?id=5" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- Card 6 (Updated to id=6) -->
+					<div class="col-md-6 col-lg-3 event-card-item" data-category="فنون" data-location="أونلاين" data-month="december">
+						<div class="card event-card h-100">
+							<img src="assets/images/thumbs_b_c_31a146894a6931433bdd6d727758c7d6.jpg" class="card-img-top" alt="فنون">
+								<div class="card-body d-flex flex-column">
+									<span class="align-self-start text-dark fw-bold mb-1">فنون</span>
+									<h5>معرض الفنون والتصميم الرقمي</h5>
+									<p class="small flex-grow-1 text-muted">استعراض لأعمال الطلاب في مجالات الرسم الرقمي والتصميم.</p>
+									<div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+										<small class="text-muted">
+											<i class="bi bi-calendar3 me-1"></i>18 ديسمبر
+										</small>
+										<a href="event.html?id=6" class="btn btn-sm btn-primary">التفاصيل</a>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<div id="noResultsMsg" class="text-center py-5 d-none">
+					<i class="bi bi-search fs-1 text-muted"></i>
+					<h4 class="mt-3 text-muted">لم يتم العثور على أي فعاليات</h4>
+				</div>
+			</div>
+		</main>
+
+		<footer class="svu-footer pt-5 pb-3">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-md-4">
+						<h5>
+							<i class="bi bi-mortarboard-fill"></i> دليل فعاليات SVU
+						</h5>
+						<p class="small mt-2">منصة لعرض فعاليات الجامعة الافتراضية السورية.</p>
+					</div>
+					<div class="col-md-4">
+						<h5>روابط سريعة</h5>
+						<ul class="list-unstyled small mt-2">
+							<li class="mb-1">
+								<a href="index.html">الرئيسية</a>
+							</li>
+							<li class="mb-1">
+								<a href="events.html">الفعاليات</a>
+							</li>
+							<li class="mb-1">
+								<a href="about.html">عن الدليل</a>
+							</li>
+							<li>
+								<a href="contact.html">اتصل بنا</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5>تابعنا</h5>
+						<div class="social">
+							<a href="https://www.facebook.com/svuonline.org/" target="_blank">
+								<i class="bi bi-facebook"></i>
+							</a>
+							<a href="https://x.com/SVU_Syria" target="_blank">
+								<i class="bi bi-twitter-x"></i>
+							</a>
+							<a href="https://www.instagram.com/syrian_virtual_university/" target="_blank">
+								<i class="bi bi-instagram"></i>
+							</a>
+							<a href="https://www.linkedin.com/company/syrian-virtual-university-svu" target="_blank">
+								<i class="bi bi-linkedin"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<hr class="border-secondary mt-4">
+					<p class="text-center small mb-0">© 2026 الجامعة الافتراضية السورية.</p>
+				</div>
+		</footer>
+
+		<button id="scrollTopBtn" title="العودة للأعلى">
+			<i class="bi bi-arrow-up"></i>
+		</button>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/events-filter.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

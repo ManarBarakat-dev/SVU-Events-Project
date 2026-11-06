@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>تفاصيل الفعالية - دليل فعاليات الجامعة الافتراضية</title>
+				<link rel="icon" type="image/png" href="assets/images/svu-logo.png">
+					<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+						<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+							<link href="assets/css/styles.css" rel="stylesheet">
+</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+					<img src="assets/images/svu-logo.png" alt="SVU Logo" style="height: 40px; width: auto;">
+						<div class="d-flex flex-column lh-1">
+							<span class="fw-bold">SVU</span>
+							<small class="fs-6">دليل الفعاليات</small>
+						</div>
+					</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">الرئيسية</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active fw-bold" href="events.html">الفعاليات</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">عن الدليل</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">اتصل بنا</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main class="py-5">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-9 mx-auto text-center">
+						<span id="eventCategory" class="badge bg-primary fs-6 mb-3 px-3 py-2 rounded-pill">...</span>
+						<h1 id="eventTitle" class="display-4 fw-bold mb-3">جاري التحميل...</h1>
+						<div class="d-flex justify-content-center gap-4 text-muted fs-5 flex-wrap">
+							<span>
+								<i class="bi bi-calendar-event me-1"></i>
+								<span id="eventDate">...</span>
+							</span>
+							<span>
+								<i class="bi bi-geo-alt me-1"></i>
+								<span id="eventLocation">...</span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-4 mb-5">
+					<div class="col-lg-8">
+						<img id="eventMainImage" src="" class="img-fluid rounded shadow w-100" style="height: 450px; object-fit: cover;" alt="صورة الفعالية">
+      </div>
+					<div class="col-lg-4">
+						<div class="card h-100 shadow-sm border-0 bg-light">
+							<div class="card-body">
+								<h5 class="card-title fw-bold mb-3">
+									<i class="bi bi-geo-alt-fill text-danger me-2"></i>مكان الفعالية
+								</h5>
+								<p id="eventLocationText" class="text-muted small mb-3">...</p>
+								<img id="eventMap" src="" class="img-fluid rounded border w-100" alt="خريطة الموقع" style="object-fit: cover; height: 200px;">
+									<div class="d-grid gap-2 mt-4">
+										<button class="btn btn-success btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">
+											<i class="bi bi-ticket-perforated me-2"></i> احجز مقعدك
+										</button>
+										<button class="btn btn-primary shadow-sm" onclick="alert('تمت الإضافة إلى التقويم!')">
+											<i class="bi bi-calendar-plus me-2"></i> أضف للتقويم
+										</button>
+										<button class="btn btn-outline-secondary shadow-sm" onclick="navigator.clipboard.writeText(window.location.href); alert('تم نسخ الرابط!');">
+											<i class="bi bi-share-fill me-2"></i> شارك الفعالية
+										</button>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-lg-9 mx-auto">
+						<h3 class="fw-bold mb-4 border-bottom pb-2">عن الفعالية</h3>
+						<p id="eventDescription" class="lead" style="line-height: 1.8;"></p>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-lg-9 mx-auto">
+						<h4 class="fw-bold mb-4 border-bottom pb-2">صور من الفعاليات السابقة</h4>
+						<div class="row g-3">
+							<div class="col-md-4">
+								<img id="galleryImg1" src="" class="img-fluid rounded shadow-sm" style="height: 200px; object-fit: cover; width: 100%;">
+							</div>
+							<div class="col-md-4">
+								<img id="galleryImg2" src="" class="img-fluid rounded shadow-sm" style="height: 200px; object-fit: cover; width: 100%;">
+							</div>
+							<div class="col-md-4">
+								<img id="galleryImg3" src="" class="img-fluid rounded shadow-sm" style="height: 200px; object-fit: cover; width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-5 pt-4 border-top">
+					<div class="col-12 mb-4">
+						<h3 class="fw-bold">
+							<i class="bi bi-link-45deg text-primary me-2"></i> فعاليات ذات صلة
+						</h3>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card event-card h-100">
+							<img src="assets/images/atletismo-correr-deportes-marathon-wallpaper-preview.jpg" class="card-img-top" alt="ماراثون">
+								<div class="card-body d-flex flex-column">
+									<span class="text-muted small mb-1">رياضة</span>
+									<h5 class="mt-1">ماراثون الجامعة الرياضي</h5>
+									<a href="event.html?id=2" class="btn btn-sm btn-outline-primary mt-auto">التفاصيل</a>
+								</div>
+							</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card event-card h-100">
+							<img src="assets/images/AI-Eye-scaled.jpg" class="card-img-top" alt="هاكاثون الذكاء الاصطناعي">
+								<div class="card-body d-flex flex-column">
+									<span class="text-muted small mb-1">تقنية</span>
+									<h5 class="mt-1">هاكاثون الذكاء الاصطناعي</h5>
+									<a href="event.html?id=4" class="btn btn-sm btn-outline-primary mt-auto">التفاصيل</a>
+								</div>
+							</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card event-card h-100">
+							<img src="assets/images/istockphoto-496647371-612x612.jpg" class="card-img-top" alt="اليوم العائلي">
+								<div class="card-body d-flex flex-column">
+									<span class="text-muted small mb-1">عائلية</span>
+									<h5 class="mt-1">اليوم العائلي المفتوح</h5>
+									<a href="event.html?id=5" class="btn btn-sm btn-outline-primary mt-auto">التفاصيل</a>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fw-bold">حجز مقعد</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body text-center">
+						<i class="bi bi-ticket-perforated display-1 text-success mb-3 d-block"></i>
+						<p class="lead">هل أنت متأكد من رغبتك في حجز مقعدك؟</p>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+						<button type="button" class="btn btn-success" onclick="alert('تم تأكيد حجزك بنجاح!'); document.querySelector('#bookingModal .btn-close').click();">تأكيد الحجز</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="svu-footer pt-5 pb-3">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-md-4">
+						<h5>
+							<i class="bi bi-mortarboard-fill"></i> دليل فعاليات SVU
+						</h5>
+						<p class="small mt-2">منصة لعرض فعاليات الجامعة الافتراضية السورية.</p>
+					</div>
+					<div class="col-md-4">
+						<h5>روابط سريعة</h5>
+						<ul class="list-unstyled small mt-2">
+							<li class="mb-1">
+								<a href="index.html">الرئيسية</a>
+							</li>
+							<li class="mb-1">
+								<a href="events.html">الفعاليات</a>
+							</li>
+							<li class="mb-1">
+								<a href="about.html">عن الدليل</a>
+							</li>
+							<li>
+								<a href="contact.html">اتصل بنا</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5>تابعنا</h5>
+						<div class="social">
+							<a href="https://www.facebook.com/svuonline.org/" target="_blank">
+								<i class="bi bi-facebook"></i>
+							</a>
+							<a href="https://x.com/SVU_Syria" target="_blank">
+								<i class="bi bi-twitter-x"></i>
+							</a>
+							<a href="https://www.instagram.com/syrian_virtual_university/" target="_blank">
+								<i class="bi bi-instagram"></i>
+							</a>
+							<a href="https://www.linkedin.com/company/syrian-virtual-university-svu" target="_blank">
+								<i class="bi bi-linkedin"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<hr class="border-secondary mt-4">
+					<p class="text-center small mb-0">© 2026 الجامعة الافتراضية السورية — جميع الحقوق محفوظة.</p>
+				</div>
+		</footer>
+
+		<button id="scrollTopBtn" title="العودة للأعلى">
+			<i class="bi bi-arrow-up"></i>
+		</button>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			var urlParams = new URLSearchParams(window.location.search);
+			var eventId = urlParams.get('id') || '1';
+
+			var events = {
+			'1': { title: "مهرجان الثقافة والكتاب", category: "ثقافة", date: "15 نوفمبر 2026", location: "قاعة المؤتمرات", locText: "قاعة المؤتمرات - المبنى الرئيسي", img: "assets/images/Book_Fair_browsing_1440x900.jpg", map: "assets/images/map-campus.jpg", desc: "يهدف المهرجان إلى تعزيز ثقافة القراءة وربط الطلاب بدور النشر المحلية والعالمية. يتضمن المهرجان أجنحة لعرض أحدث الإصدارات، ندوات ثقافية وحلقات نقاش، وجلسات توقيع الكتب.", gal: ["assets/images/gallery-book-1.jpg", "assets/images/gallery-book-2.jpg", "assets/images/gallery-book-3.jpg"] },
+
+			'2': { title: "ماراثون الجامعة الرياضي", category: "رياضة", date: "22 نوفمبر 2026", location: "الملعب الرئيسي", locText: "الملعب الرياضي - الحرم الجامعي", img: "assets/images/atletismo-correr-deportes-marathon-wallpaper-preview.jpg", map: "assets/images/map-stadium.jpg", desc: "سباقات جري بمسافات مختلفة وجوائز قيّمة للفائزين بمشاركة كافة الكليات. يتضمن الماراثون سباق 5 كم للطلاب الجدد، وسباق 10 كم للمحترفين، مع جوائز مالية للفائزين.", gal: ["assets/images/gallery-run-1.jpg", "assets/images/gallery-run-2.jpg", "assets/images/gallery-run-3.jpg"] },
+
+			'3': { title: "أمسية موسيقية كلاسيكية", category: "موسيقى", date: "5 ديسمبر 2026", location: "المسرح الكبير", locText: "المسرح الكبير - مبنى الأنشطة", img: "assets/images/music-educator-directing-student-orchestra-classroom_38013-84961.jpg", map: "assets/images/map-campus.jpg", desc: "أوركسترا الجامعة تقدّم مختارات من أشهر المؤلفات العالمية والعربية. تشمل الأمسية عزفاً منفرداً لطلاب المعهد، ومقطوعات لبيتهوفن وموتسارت.", gal: ["assets/images/gallery-music-1.jpg", "assets/images/gallery-music-2.jpg", "assets/images/gallery-music-3.jpg"] },
+
+			'4': { title: "هاكاثون الذكاء الاصطناعي", category: "تقنية", date: "28 نوفمبر 2026", location: "أونلاين", locText: "منصة الجامعة الافتراضية - عبر الإنترنت", img: "assets/images/AI-Eye-scaled.jpg", map: "assets/images/map-online.jpg", desc: "حلول مبتكرة لتحديات البرمجة وتطوير البرمجيات الذكية. يتضمن الماراثون تحديات برمجية في مجالات الذكاء الاصطناعي، وتتكون الفرق من 3 طلاب كحد أقصى.", gal: ["assets/images/gallery-ai-1.jpg", "assets/images/gallery-ai-2.jpg", "assets/images/gallery-ai-3.jpg"] },
+
+			'5': { title: "اليوم العائلي المفتوح", category: "عائلية", date: "10 ديسمبر 2026", location: "الحديقة الجامعية", locText: "الحديقة الجامعية - المنطقة الخارجية", img: "assets/images/istockphoto-496647371-612x612.jpg", map: "assets/images/map-stadium.jpg", desc: "أنشطة ترفيهية ومسابقات تجمع بين الطلاب وأسرهم في أجواء احتفالية. يشمل اليوم ألعاباً ترفيهية للأطفال، مسابقات رياضية للعائلات، وركناً للطعام.", gal: ["assets/images/gallery-family-1.jpg", "assets/images/gallery-family-2.jpg", "assets/images/gallery-family-3.jpg"] },
+
+			'6': { title: "معرض الفنون والتصميم الرقمي", category: "فنون", date: "18 ديسمبر 2026", location: "قاعة المعارض", locText: "قاعة المعارض - مبنى الكليات الفنية", img: "assets/images/thumbs_b_c_31a146894a6931433bdd6d727758c7d6.jpg", map: "assets/images/map-online.jpg", desc: "استعراض لأعمال الطلاب في مجالات الرسم الرقمي والتصميم الهندسي. يضم المعرض قسم الرسم الرقمي، قسم التصميم الهندسي، وقسم الوسائط المتعددة.", gal: ["assets/images/gallery-art-1.jpg", "assets/images/gallery-art-2.jpg", "assets/images/gallery-art-3.jpg"] }
+			};
+
+			var data = events[eventId] || events['1'];
+
+			document.getElementById('eventTitle').innerText = data.title;
+			document.getElementById('eventCategory').innerText = data.category;
+			document.getElementById('eventDate').innerText = data.date;
+			document.getElementById('eventLocation').innerText = data.location;
+			document.getElementById('eventLocationText').innerText = data.locText;
+			document.getElementById('eventMainImage').src = data.img;
+			document.getElementById('eventMap').src = data.map;
+			document.getElementById('eventDescription').innerText = data.desc;
+
+			if(data.gal) {
+			document.getElementById('galleryImg1').src = data.gal[0];
+			document.getElementById('galleryImg2').src = data.gal[1];
+			document.getElementById('galleryImg3').src = data.gal[2];
+			}
+			});
+		</script>
+	</body>
+</html>

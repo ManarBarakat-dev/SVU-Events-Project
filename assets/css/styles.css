@@ -1,0 +1,91 @@
+/* ---------- ألوان الموقع الأساسية ---------- */
+:root {
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --svu-accent: #fbbf24;
+}
+
+/* ---------- بطاقات الفعاليات ---------- */
+.event-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s, box-shadow 0.25s;
+  color: var(--text-main);
+}
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(14, 116, 144, 0.18);
+}
+.event-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ---------- الروابط في القائمة ---------- */
+.nav-link:hover {
+  color: #0b1220;
+  font-weight: 700;
+}
+
+/* ---------- الفوتر ---------- */
+.svu-footer {
+  background: #0b1220;
+  color: #cbd5e1;
+  margin-top: auto;
+}
+.svu-footer h5 { color: #fff; font-weight: 700; }
+.svu-footer a { color: #cbd5e1; transition: color 0.2s; text-decoration: none;}
+
+/* --------- Social network ---------- */
+.svu-footer .social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  margin-inline-start: 0.4rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.svu-footer .social a:hover { background: var(--svu-accent); color: #000; }
+
+/* ---------- زر الرجوع للأعلى ---------- */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1030;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #0e7490;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 6px 20px rgba(14,116,144,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ---------- الشريط الترويجي ----------*/
+.banner {
+  height: 500px;
+  object-fit: cover;
+}
+
+.badge-custom-5 {
+    background-color: #6f42c1 !important;
+    color: #ffffff !important;
+}
